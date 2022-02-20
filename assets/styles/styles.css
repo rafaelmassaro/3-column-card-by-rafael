@@ -1,0 +1,127 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-light-gray);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 920px;
+  display: flex;
+  height: 500px;
+}
+
+section {
+  flex: 1;
+  padding: 45px;
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+
+section .heading {
+  margin-top: 45px;
+  margin-bottom: 40px;
+  font-size: 3.5rem;
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  color: var(--very-light-gray);
+}
+
+section .description {
+  color: var(--transparent-white);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+section .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 88px;
+  text-decoration: none;
+  background-color: var(--very-light-gray);
+  height: 50px;
+  width: 150px;
+  border-radius: 30px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+  transition: color 0.7s;
+}
+
+section .button:hover {
+  border: 1px solid var(--very-light-gray);
+}
+
+.button-sedan {
+  color: var(--bright-orange);
+}
+.button-suvs {
+  color: var(--dark-cyan);
+}
+.button-luxury {
+  color: var(--very-dark-cyan);
+}
+
+.button-sedan:hover {
+  background-color: var(--bright-orange);
+  color: var(--very-light-gray);
+}
+.button-suvs:hover {
+  background-color: var(--dark-cyan);
+  color: var(--very-light-gray);
+}
+.button-luxury:hover {
+  background-color: var(--very-dark-cyan);
+  color: var(--very-light-gray);
+}
+
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .sedans {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  section .button {
+    margin-top: 30px;
+  }
+}
